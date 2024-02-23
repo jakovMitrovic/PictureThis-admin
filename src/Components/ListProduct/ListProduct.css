@@ -1,0 +1,140 @@
+p{
+    color: #4a4a4a !important;
+}
+
+.list-product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    padding: 10px 50px;
+    margin: auto;
+    margin-top: 2em;
+    border-radius: 6px;
+    background: white;
+}
+
+.listitem:hover{
+    box-shadow: rgba(49, 50, 51, 0.487) 0px 8px 10px -10px;
+}
+.productslist-title {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr 1fr 1fr 1fr;
+    gap: 25px;
+    /* width: 100%; */
+    padding: 20px 0px;
+    font-size: 15px;
+    color: #454545;
+
+
+}
+
+.format {
+    align-items: center;
+}
+
+.product-icon {
+    height: 90px;
+    width: 90px;
+    object-fit: cover;
+}
+
+.listproduct {
+    cursor: pointer;
+    margin: auto;
+}
+
+.productlist-items {
+    overflow-y: auto;
+}
+
+.listproduct-remove {
+    cursor: pointer;
+}
+
+hr {
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(114, 114, 114, 0.672), rgba(0, 0, 0, 0));
+}
+
+.del {
+    background: rgb(255, 255, 255);
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+ 
+}
+
+.del p{
+    color: rgb(60, 60, 60);
+    
+    font-size: larger;
+}
+
+.del-btn{
+    width: 100px;
+    height: 50px;
+    border: solid 2px red;
+    border-radius: 25px;
+    color: red;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-size: larger;
+    margin: 0 5px;
+}
+.del-btn:hover{
+    background-color: rgb(255, 47, 47);
+    color: aliceblue;
+}
+
+
+.cancel-btn{
+    width: 100px;
+    height: 50px;
+    border: solid 2px rgb(163, 255, 223);
+    border-radius: 25px;
+    color: rgb(107, 107, 107);
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-size: larger;
+    margin: 0 5px;
+}
+
+.cancel-btn:hover{
+    background-color: rgb(47, 255, 245);
+    color: rgb(72, 72, 72);
+}
+
+
+
+
+@media(max-width:800px) {
+    .list-product {
+        box-sizing: border-box;
+        width: 95%;
+        height: 100%;
+        padding: 10px 30px;
+        margin: 20px auto;
+    }
+
+    .productslist-title {
+        padding: 15px 0px;
+        color: #454545;
+        font-size: 12px;
+    }
+
+    .product-icon {
+        height: 70px;
+        width: 70px;
+    }
+
+
+}
