@@ -43,3 +43,26 @@
         width: 60px;
     }
 }
+
+
+.login_btn{
+    text-decoration: none;
+    color: rgb(240, 240, 240);
+    background-color: #b5b5b5;
+    padding: 0.5em 1em;
+    border-radius: 30px;
+    border: none;
+    height: 20px;
+}
+
+
+.logout_btn{
+    text-decoration: none;
+    color: rgb(240, 240, 240);
+    background-color: #b5b5b5;
+    padding: 0.5em 1em;
+    border-radius: 30px;
+    border: none;
+    height: 40px;
+    cursor: pointer;
+}

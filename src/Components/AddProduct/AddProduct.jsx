@@ -80,12 +80,12 @@ const AddProduct = () => {
         <h1>Add new products</h1>
             <div className="addproduct-input">
                 <p>Product name</p>
-                <input value={productDetails.name} onChange={(e) => { setName(e.target.value) }} type='text' name='name' />
+                <input value={productDetails.name} onChange={(e) => { setName(e.target.value) }} type='text' name='name' required="true"/>
             </div>
             <div className='addproduct-price'>
                 <div className="addproduct-input">
                     <p>Price</p>
-                    <input value={productDetails.price} onChange={(e) => { setPrice(e.target.value) }} type='number' name='price' />
+                    <input value={productDetails.price} onChange={(e) => { setPrice(e.target.value) }} type='number' name='price' required="true"/>
                 </div>
                 <div className="addproduct-input">
                     <p>Sale Price</p>
@@ -111,7 +111,7 @@ const AddProduct = () => {
                 </div>
                 <div className="addproduct-input">
                     <p>Model</p>
-                    <input value={productDetails.name} onChange={(e) => { setModel(e.target.value) }} type='text' name='name' />
+                    <input value={productDetails.model} onChange={(e) => { setModel(e.target.value) }} type='text' name='name' required="true"/>
                 </div>
             </div>
             <div className='addproduct-price '>
@@ -120,7 +120,7 @@ const AddProduct = () => {
                     <select value={productDetails.category} onChange={onCategoryChange} name='category' className='add-product-selector'>
                         <option value='camera'>Camera</option>
                         <option value='lens'>Lenses</option>
-                        <option value='lighting'>Lighting</option>
+                        <option value='other'>Other</option>
                     </select>
                 </div>
 
@@ -128,7 +128,7 @@ const AddProduct = () => {
                     <label htmlFor='file-input'>
                         <img src={image ? URL.createObjectURL(image) : upload} className='addproduct-img' alt='' />
                     </label>
-                    <input onChange={imageHandler} type='file' name='image' id='file-input' hidden />
+                    <input onChange={imageHandler} type='file' name='image' id='file-input' hidden required="true"/>
                     <p>Image upload</p>
                 </div>
 
@@ -137,15 +137,15 @@ const AddProduct = () => {
                 <>
                     <div className="addproduct-input">
                         <p>Focal Length</p>
-                        <input value={productDetails.focalLength} onChange={changeHandler} type='text' name='focalLength' />
+                        <input value={productDetails.focalLength} onChange={changeHandler} type='text' name='focalLength' required="true"/>
                     </div>
                     <div className="addproduct-input">
                         <p>F-Stop</p>
-                        <input value={productDetails.fStop} onChange={changeHandler} type='text' name='fStop' />
+                        <input value={productDetails.fStop} onChange={changeHandler} type='text' name='fStop' required="true"/>
                     </div>
                     <div className="addproduct-input">
                         <p>Lens Mount</p>
-                        <input value={productDetails.lensMount} onChange={changeHandler} type='text' name='lensMount' />
+                        <input value={productDetails.lensMount} onChange={changeHandler} type='text' name='lensMount' required="true"/>
                     </div>
                 </>
             )
@@ -156,24 +156,24 @@ const AddProduct = () => {
                 <>
                     <div className="addproduct-input">
                         <p>Megapixel</p>
-                        <input value={productDetails.megaPixel} onChange={changeHandler} type='text' name='megaPixel' />
+                        <input value={productDetails.megaPixel} onChange={changeHandler} type='text' name='megaPixel' required="true"/>
                     </div>
                     <div className="addproduct-input">
                         <p>Sensor</p>
-                        <input value={productDetails.sensor} onChange={changeHandler} type='text' name='sensor' />
+                        <input value={productDetails.sensor} onChange={changeHandler} type='text' name='sensor' required="true"/>
                     </div>
                     <div className="addproduct-input">
                         <p>Lens Mount</p>
-                        <input value={productDetails.mount} onChange={changeHandler} type='text' name='mount' />
+                        <input value={productDetails.mount} onChange={changeHandler} type='text' name='mount' required="true"/>
                     </div>
                 </>
             )}
 
 
-            {productDetails.category === 'lighting' && (
+            {productDetails.category === 'other' && (
                 <div className="addproduct-input">
                     <p>Description</p>
-                    <input value={productDetails.desc} onChange={changeHandler} type='text' name='desc' />
+                    <input value={productDetails.desc} onChange={changeHandler} type='text' name='desc' required="true"/>
                 </div>
             )}
 

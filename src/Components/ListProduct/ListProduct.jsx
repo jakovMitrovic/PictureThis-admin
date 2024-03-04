@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './ListProduct.css'
 import remove_icon from '../../assets/cross_icon.png'
+import { Link } from 'react-router-dom'
 
 const ListProduct = () => {
 
@@ -57,10 +58,11 @@ const ListProduct = () => {
       <div className="productlist-items">
         <hr />
         {products.map((product, i) => {
-          return <div key={i} className='listitem'>
+          return <>
+            <div key={i} className='listitem'>
             <div  className="productslist-title format">
               <img src={product.image} alt="" className="product-icon" />
-              <p>{product.name}</p>
+              <Link className='product_list_link' to={`/edit/${product._id}`}><p>{product.name}</p></Link>
               <p>${product.price}</p>
               <p>{product.sale_price ? `$${product.sale_price}` : "/"}</p>
               <p>{product.category}</p>
@@ -77,6 +79,7 @@ const ListProduct = () => {
             </div>
             <hr />
           </div>
+          </>
         })}
       </div>
     </div>
